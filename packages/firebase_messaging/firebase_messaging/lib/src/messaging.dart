@@ -32,7 +32,7 @@ class FirebaseMessaging extends FirebasePluginPlatform {
   /// Returns an instance using the default [FirebaseApp].
   static FirebaseMessaging get instance {
     FirebaseApp defaultAppInstance = Firebase.app();
-    return FirebaseMessaging._instanceFor(app: defaultAppInstance);
+    return FirebaseMessaging.instanceFor(app: defaultAppInstance);
   }
 
   /// Returns an instance using a specified [FirebaseApp].

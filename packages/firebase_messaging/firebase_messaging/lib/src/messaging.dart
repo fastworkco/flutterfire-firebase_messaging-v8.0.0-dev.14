@@ -36,10 +36,8 @@ class FirebaseMessaging extends FirebasePluginPlatform {
   }
 
   /// Returns an instance using a specified [FirebaseApp].
-  factory FirebaseMessaging.instanceFor({FirebaseApp app}) {
-    return _firebaseMessagingInstances.putIfAbsent(app.name, () {
-      return FirebaseMessaging._(app: app);
-    });
+  static FirebaseMessaging instanceFor({required FirebaseApp app}) {
+    return FirebaseMessaging._instanceFor(app: app);
   }
 
   /// Returns an instance using a specified [FirebaseApp]
